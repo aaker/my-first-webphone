@@ -166,7 +166,7 @@ function __doCurl($url, $method, $authorization, $query, $postFields, &$http_res
         'device' => "sip:".$username,
         'object' => "device",
         'action' => "read",
-        'domain' => "aaker.com",
+        'domain' => substr($username, strpos($username, "@") + 1),
         'noNDP' => "yes",
         'format' => "json"
     );
